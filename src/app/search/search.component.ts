@@ -7,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchComponent implements OnInit {
 
+  // private searchTerms = new Subject<string>();
+
+  // search(term: string): void {
+  //   this.searchTerms.next(term);
+  // }
+
   constructor() { }
 
   ngOnInit() {

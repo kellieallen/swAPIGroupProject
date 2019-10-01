@@ -1,0 +1,23 @@
+.titleSpan {
+    display: flex;
+    flex: 1 1 auto;
+    font-size: 1.5em;
+}
+
+#searchBar {
+    background-color: lightgrey;
+    height: 25vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#results {
+    background-color: grey;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
