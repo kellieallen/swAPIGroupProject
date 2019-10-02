@@ -1,1 +1,62 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/pink-bluegrey.css';
+
+html, body { height: 100%; }
+
+
+body {
+
+
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    background-image: url(".//assets/sw.jpg");
+    color: lightgray;
+
+
+
+}
+
+.mat-toolbar.mat-primary {
+    background: #FFE81F;
+
+}
+
+span {
+    color: black;
+}
+
+.mat-raised-button {
+    background: #FFE81F;
+    background-color: #FFE81F;
+    color: #FFE81F
+}
+
+.starwars-card
+{
+  width: 30%;
+  margin-left: 20%;
+}
+
+.mat-card
+{
+  background-color: #FFE81F;
+  color: black;
+  margin-bottom: 10%;
+}
+
+.mat-card-subtitle
+{
+  color: black;
+}
+
+.search-area
+{
+  margin-left: 20%;
+  padding-top: 5%;
+  padding-bottom: 3%
+}
+
+.mat-option {
+
+  background-color: white;
+}
+
