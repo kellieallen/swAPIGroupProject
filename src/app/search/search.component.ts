@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular.common/http';
+import { FetchserviceService } from '../fetchservice.service';
 
 export interface Food {
   value: string;
@@ -12,12 +12,23 @@ export interface Food {
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent {
+  results;
+  selectedVal;
+  constructor(private Fetch: FetchserviceService) { }
 
-
-
-  searches: Search[] = [
-    {value: 'people-0', viewValue: 'People'},
-    {value: 'ships-1', viewValue: 'Ships'},
-    {value: 'films-2', viewValue: 'Films'}
+  searches = [
+    {value: 'people', viewValue: 'People'},
+    {value: 'starships', viewValue: 'Ships'},
+    {value: 'films', viewValue: 'Films'}
   ];
+
+  getSearch(selected, searchTerm): void{
+    console.log(selected, searchTerm);
+    this.selectedVal = selected;
+    this.Fetch.getSWapi(selected, searchTerm)
+      .subscribe(data => {
+        console.log(data);
+        this.results = data;
+      })
+    }
 }
