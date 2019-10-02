@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FetchService } from '../fetch.service';
 
 @Component({
   selector: 'app-search',
@@ -6,14 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements OnInit {
+  results: [];
 
-  // private searchTerms = new Subject<string>();
+  getInfo(): void {
+    this.results = this.fetch.getInfo();
+  }
 
-  // search(term: string): void {
-  //   this.searchTerms.next(term);
-  // }
-
-  constructor() { }
+  constructor(private fetch:FetchService) { }
 
   ngOnInit() {
   }
