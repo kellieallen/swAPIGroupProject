@@ -45,12 +45,7 @@ span {
   color: black;
   margin-bottom: 10%;
 
-
-
-
 }
-
-
 
 .search-area
 {
@@ -103,4 +98,8 @@ mat-form-field.mat-focused.mat-primary .mat-select-arrow {
 .bolded
 {
   font-weight: bold;
+}
+
+.mat-icon{
+  color: white;
 }
