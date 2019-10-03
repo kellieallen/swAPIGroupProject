@@ -1,15 +1,15 @@
 <div *ngIf="selected==='people'">
+  <!-- if value selected is people, display this.. goes to results.components.ts Input -->
   <mat-card class="starwars-card" *ngFor='let result of results.results'>
+    <!-- display the card, loop through array of results -->
     <mat-card-header>
       <div mat-card-avatar class="example-header-image"></div>
       <mat-card-title>{{result.name}}</mat-card-title>
 
     </mat-card-header>
-    <img mat-card-image src="http://i.imgur.com/kw6Rlkl.jpg" alt="Photo of a Shiba Inu">
+    <img mat-card-image src="http://i.imgur.com/kw6Rlkl.jpg" alt="star wars characters">
     <mat-card-content>
-      <p>
-        Stats:
-      </p>
+
       <p>Height: {{result.height}}</p>
       <p>Mass: {{result.mass}}lb</p>
       <p>Birth Year: {{result.birth_year}}</p>
@@ -17,6 +17,7 @@
 
   </mat-card>
 </div>
+
 <div *ngIf="selected==='starships'">
   <mat-card class="starwars-card" *ngFor='let result of results.results'>
     <mat-card-header>
@@ -26,7 +27,7 @@
     </mat-card-header>
     <img mat-card-image src="https://img-9gag-fun.9cache.com/photo/a0KMZLv_700bwp.webp" alt="pic of ships">
     <mat-card-content>
-      <p>Stats:</p>
+
       <p>Model: {{result.model}}</p>
       <p>Manufacturer: {{result.manufacturer}}</p>
       <p>StarShip Class: {{result.starship_class}}</p>
@@ -34,6 +35,7 @@
 
   </mat-card>
 </div>
+
 <div *ngIf="selected==='films'">
   <mat-card class="starwars-card" *ngFor='let result of results.results'>
     <mat-card-header>
@@ -41,9 +43,9 @@
       <mat-card-title>{{result.title}}</mat-card-title>
 
     </mat-card-header>
-    <img mat-card-image src="https://images-na.ssl-images-amazon.com/images/I/81AvfkjiwZL._AC_SX679_.jpg" alt="Photo of a Shiba Inu">
+    <img mat-card-image src="https://images-na.ssl-images-amazon.com/images/I/81AvfkjiwZL._AC_SX679_.jpg" alt="star wars movie posters">
     <mat-card-content>
-      <p>Stats:</p>
+
       <p>Episode: {{result.episode_id}}</p>
       <p>Date: {{result.release_date}}</p>
       <p>Opening Crawl: {{result.opening_crawl}}</p>

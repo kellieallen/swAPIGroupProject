@@ -1,17 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
-@import '~@angular/material/prebuilt-themes/pink-bluegrey.css';
+@import '@angular/material/prebuilt-themes/purple-green.css';
 
-html, body { height: 100%; }
+html, body { height: 100%;
+}
 
 
 body {
 
 
-    font-family: Roboto, "Helvetica Neue", sans-serif;
+
+
     background-image: url(".//assets/sw.jpg");
-    color: lightgray;
-
-
+    color: black;
 
 }
 
@@ -20,8 +20,11 @@ body {
 
 }
 
+
+
+
 span {
-    color: black;
+    color: grey;
 }
 
 .mat-raised-button {
@@ -41,11 +44,7 @@ span {
   background-color: #FFE81F;
   color: black;
   margin-bottom: 10%;
-}
 
-.mat-card-subtitle
-{
-  color: black;
 }
 
 .search-area
@@ -55,8 +54,52 @@ span {
   padding-bottom: 3%
 }
 
-.mat-option {
+.example-form-field
+{
+  color: white;
 
+}
+
+.mat-option {
   background-color: white;
 }
 
+
+.mat-select-panel{
+  background-color: whitesmoke;
+}
+
+.mat-form-field-ripple {
+  background-color: white !important;
+}
+
+
+.mat-select-value{
+  color: white;
+}
+
+span.mat-button-wrapper{
+
+  color:black;
+}
+
+.mat-select-arrow{
+  color: white;
+}
+mat-form-field.mat-focused span.mat-form-field-label-wrapper label {
+  color:white !important;
+}
+
+
+mat-form-field.mat-focused.mat-primary .mat-select-arrow {
+  color:white !important;
+}
+
+.bolded
+{
+  font-weight: bold;
+}
+
+.mat-icon{
+  color: white;
+}
