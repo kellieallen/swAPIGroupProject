@@ -22,10 +22,10 @@ export class SearchComponent {
     {value: 'films', viewValue: 'Films'}
   ];
 
-  getSearch(selected, searchTerm): void{
+  getSearch(selected, searchTerm): void{ // getSearch method called later in html. Void replaces need for return in method
     console.log(selected, searchTerm);
-    this.selectedVal = selected;
-    this.Fetch.getSWapi(selected, searchTerm)
+    this.selectedVal = selected; // Classes are objects, this refers to searchComponent so this line reads => searchComponent.selectedVal = selected;
+    this.Fetch.getSWapi(selected, searchTerm) // refering to fetch service we created, 
       .subscribe(data => {
         console.log(data);
         this.results = data;
