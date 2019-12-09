@@ -7,8 +7,8 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ResultsComponent implements OnInit {
 
-  @Input()results; // angular will look for results, and they will be passed as proprties
-  @Input()selected; // angular will look for selected, and they will be passed as proprties
+  @Input()results; // angular will look for results, and they will be passed as properties
+  @Input()selected; // angular will look for selected, and they will be passed as properties
 
   constructor() { }
 

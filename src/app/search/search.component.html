@@ -2,7 +2,7 @@
 <mat-form-field>
         <mat-label>Star Wars Categories</mat-label>
         <mat-select #selected>
-          <!--  #selected creates a variable to keep track of the value - if you select people, remember people. we chose the word "selected" hashtag in front means it's a variable -->
+          <!--  #selected creates a variable to keep track of the value - if you select people, remember people. we chose the word "selected". hashtag in front means it's a variable -->
           <mat-option *ngFor="let search of searches" [value]="search.value">
             <!-- angular for loops over the 3 search options (people, ships, films). [value]="search.value" will display "people" if people value is chosen.   -->
             {{search.viewValue}}
@@ -30,5 +30,8 @@ we chose from drop down menu, input.value is what we typed in the search field -
 </div>
 <br>
 <br>
-<app-results *ngIf='results'[results]='results' [selected]='selectedVal'></app-results>
-<!-- if we have results, display results, if we don't, don't display results.  -->
+<app-results *ngIf='results' [results]='results' [selected]='selectedVal'></app-results>
+
+<!-- if we have results, display results, if we don't, don't display results.
+  [results]='results' means [results] is grabbed from ts file where we defined it as a new variable that gets filled in when we run getSearch.. and 'results' is what we call it here. s
+ -->

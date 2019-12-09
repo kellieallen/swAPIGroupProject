@@ -14,11 +14,11 @@ export interface Food {
   styleUrls: ['./search.component.css']
 })
 
-export class SearchComponent {
-  results;
-  selectedVal;
+export class SearchComponent { // class is like bluebprint for a house
+  results; // just setting up a variable that we'll use later.. nothing there now but when getSearch runs it's filled with our results
+  selectedVal; // same as above
 
-  constructor(private Fetch: FetchserviceService) { } // each time class is created, the constructor says the fetch is needed
+  constructor(private Fetch: FetchserviceService) { } // down below, getSearch calls another service we set up, FetchserviceService, here we are just renaming it Fetch and this gives us access to getSWAPI method we set up in fetchservice.
 
   searches = [
     {value: 'people', viewValue: 'People'},
@@ -26,7 +26,7 @@ export class SearchComponent {
     {value: 'films', viewValue: 'Films'}
   ];
 
-  getSearch(selected, searchTerm): void{ // we are passing in selected (from dropdown menu and search term).  we don't really need void?
+  getSearch(selected, searchTerm): void{ // we are passing in selected (from dropdown menu) and search term).  we don't really need void?
      console.log(selected, searchTerm);
     this.selectedVal = selected; // you have to step into Search Component to get the selected value from the dropdown menu
     this.Fetch.getSWapi(selected, searchTerm) // variable fetch refers to fetch serves.. creates new instance of fetchService..step into API.
